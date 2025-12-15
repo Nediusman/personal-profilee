@@ -1,0 +1,285 @@
+<!--DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>NEDI USMAN </h1><br>
+
+    <img src="1698878078778.jpg" alt="nedi usman image">
+    <p>I'm Computer Science Student at .Strong probelm Solving, Passionate about web development, algorithms and building practical solutions </p>
+    <form>
+        <input type="text" placeholder="enter your name "><br>
+        <input type="email" placeholder="enter email"><br>
+        <input type="text" placeholder="enter your comment here "><br>
+
+        <button type="submit">submit</button>
+
+
+    </form>
+</body>
+
+</html>-
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nedi Usman Portfolio</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        
+        h1 {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            margin: 0;
+        }
+        
+        img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        
+        p {
+            max-width: 600px;
+            margin: 20px auto;
+            font-size: 1.1em;
+            color: #333;
+        }
+        
+        form {
+            background: white;
+            padding: 20px;
+            margin: 30px auto;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>NEDI USMAN</h1>
+    <img src="1698878078778.jpg" alt="Nedi Usman image" />
+    <p>I'm a Computer Science student with strong problem-solving skills. Passionate about web development, algorithms, and building practical solutions.</p>
+
+    <form id="contactForm">
+        <input type="text" id="name" placeholder="Enter your name" required /><br />
+        <input type="email" id="email" placeholder="Enter your email" required /><br />
+        <input type="text" id="comment" placeholder="Enter your comment here" required /><br />
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const comment = document.getElementById("comment").value.trim();
+
+            if (!name || !email || !comment) {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            alert(`Thank you, ${name}! Your comment has been submitted.`);
+            this.reset();
+        });
+    </script>
+
+</body>
+
+</html-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nedi Usman Portfolio</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            transition: background 0.3s, color 0.3s;
+        }
+        
+        .dark-mode {
+            background-color: #121212;
+            color: #f0f0f0;
+        }
+        
+        h1 {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            margin: 0;
+        }
+        
+        img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        img:hover {
+            transform: scale(1.05);
+        }
+        
+        p {
+            max-width: 600px;
+            margin: 20px auto;
+            font-size: 1.1em;
+        }
+        
+        form {
+            background: white;
+            padding: 20px;
+            margin: 30px auto;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: background 0.3s, color 0.3s;
+        }
+        
+        .dark-mode form {
+            background-color: #1e1e1e;
+            color: #f0f0f0;
+        }
+        
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border 0.3s, box-shadow 0.3s;
+        }
+        
+        input:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            outline: none;
+        }
+        
+        .dark-mode input {
+            background-color: #333;
+            color: #f0f0f0;
+            border: 1px solid #555;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+        .toggle-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 8px 12px;
+            background: #444;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .dark-mode .toggle-btn {
+            background: #bbb;
+            color: #121212;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+    <h1>NEDI USMAN</h1>
+    <img src="1698878078778.jpg" alt="Nedi Usman image" />
+    <p>I'm a Computer Science student with strong problem-solving skills. Passionate about web development, algorithms, and building practical solutions.</p>
+
+    <form id="contactForm" action="https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse" method="POST" target="_blank">
+        <input name="entry.1234567890" type="text" id="name" placeholder="Enter your name" required /><br />
+        <input name="entry.0987654321" type="email" id="email" placeholder="Enter your email" required /><br />
+        <input name="entry.1122334455" type="text" id="comment" placeholder="Enter your comment here" required /><br />
+        <button type="submit">SEND </button>
+    </form>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+
+        document.getElementById("contactForm").addEventListener("submit", function(e) {
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const comment = document.getElementById("comment").value.trim();
+
+            if (!name || !email || !comment) {
+                alert("Please fill in all fields.");
+                e.preventDefault();
+            } else {
+                alert(Thank you, $ {
+                    name
+                }!Your comment has been submitted.);
+            }
+        });
+    </script>
+
+</body>
+
+</html>
