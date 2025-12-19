@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nedi Usman - Computer Science Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>Nedi Usman</h1>
+                <p class="title">Computer Science Student & Web Developer</p>
+                <p class="display-example">This is a demonstration of display: block</p>
+                <div>
+                    <span class="inline-example">Inline</span>
+                    <span class="inline-example">Elements</span>
+                    <span class="inline-example">Example</span>
+                </div>
+                <div>
+                    <div class="inline-block-example">Inline-Block 1</div>
+                    <div class="inline-block-example">Inline-Block 2</div>
+                    <div class="inline-block-example">Inline-Block 3</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- TOGGLE PROJECT SECTION -->
+        <section class="toggle-project-section">
+            <h2 class="toggle-project-title">Mini Project: Toggle Text (ON / OFF)</h2>
+            <div class="toggle-container">
+                <h1 id="toggleText" class="toggle-heading">OFF</h1>
+                <button id="toggleButton" class="toggle-button">Toggle</button>
+                <div class="state-indicator">Current State: <span id="stateIndicator">OFF</span></div>
+            </div>
+        </section>
+
+        <section class="profile-section">
+            <div class="profile-image">
+                <img src="1698878078778.jpg" alt="Nedi Usman profile picture">
+            </div>
+            <div class="profile-bio">
+                <h2>About Me</h2>
+                <p>Hello! I'm <span class="highlight">Nedi Usman</span>, a passionate Computer Science student with strong problem-solving skills and a keen interest in web development, algorithms, and building practical solutions. I enjoy turning complex
+                    problems into simple, beautiful, and intuitive designs.</p>
+                <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or reading about the latest advancements in artificial intelligence and machine learning.</p>
+                <p>My goal is to build applications that are not only functional but also provide exceptional user experiences.</p>
+            </div>
+        </section>
+
+        <section class="skills-section">
+            <h2 class="section-title">My Skills & Interests</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">💻</div>
+                    <h3>Web Development</h3>
+                    <p>HTML5, CSS3, JavaScript, React, Node.js, and responsive design principles.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🔢</div>
+                    <h3>Algorithms</h3>
+                    <p>Data structures, problem-solving, optimization, and computational thinking.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">📱</div>
+                    <h3>UI/UX Design</h3>
+                    <p>Creating intuitive user interfaces and focusing on user experience design.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">⚙️</div>
+                    <h3>Backend Systems</h3>
+                    <p>Database design, API development, server management, and cloud computing.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <h2 class="section-title">Get In Touch</h2>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" placeholder="Enter your message here..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <p><strong>Nedi Usman</strong></p>
+                <p>Computer Science Portfolio</p>
+                <p class="copyright">© 2023 Nedi Usman. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="3day/script.js">
+    </script>
+</body>
+
+</html>

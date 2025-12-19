@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nedi Usman - Computer Science Portfolio</title>
+    <style>
+        /* Base Styles */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* Header Styles */
+        
+        header {
+            background: linear-gradient(135deg, #2c3e50, #4a6491);
+            color: white;
+            padding: 40px 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .header-content h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .title {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+        /* Display Example Styles */
+        
+        .display-example {
+            display: block;
+            background-color: #3498db;
+            color: white;
+            padding: 15px;
+            margin: 15px auto;
+            border-radius: 5px;
+            max-width: 400px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .inline-example {
+            display: inline;
+            background-color: #e74c3c;
+            color: white;
+            padding: 8px 12px;
+            margin: 5px;
+            border-radius: 3px;
+        }
+        
+        .inline-block-example {
+            display: inline-block;
+            background-color: #2ecc71;
+            color: white;
+            padding: 10px 15px;
+            margin: 10px;
+            width: 120px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        /* Profile Section */
+        
+        .profile-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 40px;
+            align-items: center;
+        }
+        
+        .profile-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        
+        .profile-image img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 50%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .profile-bio {
+            flex: 2;
+            min-width: 300px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+        
+        .profile-bio h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+        
+        .highlight {
+            color: #3498db;
+            font-weight: bold;
+        }
+        /* Skills Section */
+        
+        .section-title {
+            text-align: center;
+            color: #2c3e50;
+            margin: 40px 0 30px;
+            font-size: 2rem;
+            text-transform: uppercase;
+        }
+        
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+        
+        .skill-card {
+            flex: 1;
+            min-width: 250px;
+            max-width: 280px;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .skill-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .skill-card h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        /* Contact Section */
+        
+        .contact-section {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            margin-bottom: 40px;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+        
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin: 20px auto 0;
+        }
+        
+        .submit-btn:hover {
+            background: #2980b9;
+        }
+        /* Footer */
+        
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .footer-content p {
+            margin: 10px 0;
+        }
+        
+        .copyright {
+            opacity: 0.8;
+            font-size: 0.9rem;
+            margin-top: 20px;
+        }
+        /* TOGGLE PROJECT STYLES */
+        
+        .toggle-project-section {
+            background: white;
+            padding: 50px 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            margin: 50px 0;
+            text-align: center;
+        }
+        
+        .toggle-project-title {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .toggle-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 300px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 10px;
+            padding: 40px 20px;
+            margin: 0 auto;
+            max-width: 600px;
+        }
+        /* Display block example */
+        
+        .toggle-heading {
+            display: block;
+            text-align: center;
+            font-size: 4rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            color: #e74c3c;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        /* Inline-block example for button */
+        
+        .toggle-button {
+            display: inline-block;
+            background: #2c3e50;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .toggle-button:hover {
+            background: #3498db;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        .toggle-button:active {
+            transform: translateY(0);
+        }
+        
+        .state-indicator {
+            font-size: 1.2rem;
+            margin-top: 25px;
+            color: #2c3e50;
+            font-weight: 600;
+            background: #f1f8ff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        /* Responsive Design */
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            .header-content h1 {
+                font-size: 2.2rem;
+            }
+            .profile-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .skill-card {
+                min-width: 100%;
+            }
+            .toggle-heading {
+                font-size: 3rem;
+            }
+            .toggle-button {
+                padding: 12px 30px;
+                font-size: 1.1rem;
+            }
+            .contact-section {
+                padding: 30px 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header-content h1 {
+                font-size: 1.8rem;
+            }
+            .toggle-heading {
+                font-size: 2.5rem;
+            }
+            .toggle-button {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+            .section-title {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>Nedi Usman</h1>
+                <p class="title">Computer Science Student & Web Developer</p>
+                <p class="display-example">This is a demonstration of display: block</p>
+                <div>
+                    <span class="inline-example">Inline</span>
+                    <span class="inline-example">Elements</span>
+                    <span class="inline-example">Example</span>
+                </div>
+                <div>
+                    <div class="inline-block-example">Inline-Block 1</div>
+                    <div class="inline-block-example">Inline-Block 2</div>
+                    <div class="inline-block-example">Inline-Block 3</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- TOGGLE PROJECT SECTION -->
+        <section class="toggle-project-section">
+            <h2 class="toggle-project-title">Mini Project: Toggle Text (ON / OFF)</h2>
+            <div class="toggle-container">
+                <h1 id="toggleText" class="toggle-heading">OFF</h1>
+                <button id="toggleButton" class="toggle-button">Toggle</button>
+                <div class="state-indicator">Current State: <span id="stateIndicator">OFF</span></div>
+            </div>
+        </section>
+
+        <section class="profile-section">
+            <div class="profile-image">
+                <img src="1698878078778.jpg" alt="Nedi Usman profile picture">
+            </div>
+            <div class="profile-bio">
+                <h2>About Me</h2>
+                <p>Hello! I'm <span class="highlight">Nedi Usman</span>, a passionate Computer Science student with strong problem-solving skills and a keen interest in web development, algorithms, and building practical solutions. I enjoy turning complex
+                    problems into simple, beautiful, and intuitive designs.</p>
+                <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or reading about the latest advancements in artificial intelligence and machine learning.</p>
+                <p>My goal is to build applications that are not only functional but also provide exceptional user experiences.</p>
+            </div>
+        </section>
+
+        <section class="skills-section">
+            <h2 class="section-title">My Skills & Interests</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">💻</div>
+                    <h3>Web Development</h3>
+                    <p>HTML5, CSS3, JavaScript, React, Node.js, and responsive design principles.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🔢</div>
+                    <h3>Algorithms</h3>
+                    <p>Data structures, problem-solving, optimization, and computational thinking.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">📱</div>
+                    <h3>UI/UX Design</h3>
+                    <p>Creating intuitive user interfaces and focusing on user experience design.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">⚙️</div>
+                    <h3>Backend Systems</h3>
+                    <p>Database design, API development, server management, and cloud computing.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <h2 class="section-title">Get In Touch</h2>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" placeholder="Enter your message here..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <p><strong>Nedi Usman</strong></p>
+                <p>Computer Science Portfolio</p>
+                <p class="copyright">© 2023 Nedi Usman. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Toggle Project JavaScript
+        const toggleText = document.getElementById('toggleText');
+        const toggleButton = document.getElementById('toggleButton');
+        const stateIndicator = document.getElementById('stateIndicator');
+
+        // Track current state
+        let isOn = false;
+
+        // Toggle function
+        function toggleState() {
+            isOn = !isOn;
+
+            if (isOn) {
+                toggleText.textContent = "ON";
+                toggleText.style.color = "#2ecc71";
+                stateIndicator.textContent = "ON";
+                stateIndicator.style.color = "#2ecc71";
+            } else {
+                toggleText.textContent = "OFF";
+                toggleText.style.color = "#e74c3c";
+                stateIndicator.textContent = "OFF";
+                stateIndicator.style.color = "#e74c3c";
+            }
+        }
+
+        // Add event listener to button
+        toggleButton.addEventListener('click', toggleState);
+
+        // Existing portfolio JavaScript
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if (!name || !email || !message) {
+                alert('Please fill in all fields.');
+                return;
+            }
+
+            alert(`Thank you, ${name}! Your message has been received. I'll get back to you at ${email} soon.`);
+
+            this.reset();
+        });
+
+        document.querySelectorAll('.skill-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+
+</html>
